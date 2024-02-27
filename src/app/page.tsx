@@ -1,16 +1,11 @@
-'use client';
-import { Button } from "@/components/ui/button";
+import LoginForm from '@/components/LoginFrom';
 
-// import { Button } from "@/components/ui/button"
-
-export default function Home() {
+export default function LoginPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Button>
-        {/* <Icon icon="material-symbols:progress-activity-sharp" className="animate-spin mr-2 w-0 group-hover:w-10 duration-300" /> */}
-        {/* <ReloadIcon className="mr-2 h-4 w-4 animate-spin" /> */}
-        Please wait
-      </Button>
+    <main className="flex items-center justify-center md:h-screen">
+      <div className="relative mx-auto flex w-full max-w-[400px] flex-col space-y-2.5 p-4 md:-mt-32">
+        <LoginForm />
+      </div>
     </main>
   );
 }
