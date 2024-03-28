@@ -17,6 +17,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import PDFDownloader from '../common/PDFDownloader';
+import { DueHistoryPDF } from '../pdf/DueHistoryPDF';
+import { Quixote } from '../pdf/HistoryPDF';
 
 const HistoryHeader = () => {
   const router = useRouter();
@@ -73,10 +76,11 @@ const HistoryHeader = () => {
           triggerClasses="!h-[4.8rem]"
         />
 
-        <Button variant={'secondary'}>
-          <DownloadIcon />
-          PDF Download
-        </Button>
+        <PDFDownloader name="Due_history_pdf">
+          <DueHistoryPDF />
+        </PDFDownloader>
+
+        <DueHistoryPDF />
       </div>
     </div>
   );
